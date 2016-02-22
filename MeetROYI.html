@@ -1,0 +1,654 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>MeetROYI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="themes/MeetROI.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>                            
+	<link href="themes/MeetROI.css" rel="stylesheet" type="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script id="panel-init">
+	$(function() {
+		$( "body>[data-role='panel']" ).panel().enhanceWithin();
+	});
+	</script>
+
+</head> 
+
+<body>
+
+<!-- Start page------------------------------------------- -->
+<div data-role="page" id="MeetROYI" data-theme="a">
+
+	<script>
+    $(document).bind('mobileinit',function(){
+        $.mobile.pushStateEnabled = false;
+    });
+	</script>
+	<script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
+	
+	<div data-role="header">
+		<h3>MeetROYI</h3>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+		<a href="#Settings" data-icon="gear" data-iconpos="notext">Settings</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+
+			<div class="center-wrapper">
+				<img width="100" height="76" alt="Header"
+					src="themes/images/purplecow1.png" /> 
+			</div>
+			<br>
+			<div data-role="collapsible" data-theme="b">
+				<h4>Meet ROYI, your meeting expert!</h4>
+				<p class="small">When setting up a meeting, ROYI can tell you if it will be valuable, and gives you clever meeting details so all participants know what they will get out of attending!</p>
+				<p class="small">ROYI also gives you an opportunity to provide valuable feedback to others to help them measure their own event outcomes.</p>
+				<a href="#About1" class="ui-btn ui-icon-user ui-btn-icon-left ui-btn-b">Find out more about ROYI</a>
+			</div>
+		
+		<a href="#Measure1" class="ui-btn ui-icon-clock ui-btn-icon-left">Set up a meeting</a>
+		<div data-role="tabs" id="tabs">
+			<div data-role="navbar" class="small">
+				<ul>
+					<li><a href="#Upcoming" data-ajax="false" class="ui-btn-active">Meet <span class="ui-li-count">2</span></a></li>
+					<li><a href="#Completed" data-ajax="false">Rate <span class="ui-li-count">1</span></a></li>
+					<li><a href="#Rated" data-ajax="false">ROI <span class="ui-li-count">2</span></a></li>
+				</ul>
+			</div>
+			<div id="Upcoming" class="ui-body">
+				<p><b>Meetings to attend</b></p>
+				<div data-role="collapsible" class="small" data-collapsed-icon="user" data-expanded-icon="user">
+					<h4>Wed 10th Jun, 9:30am (1hr)<br>Product Weekly Team Meeting (+$340)</h4>
+					<b>Meeting type: Video conference</b><br>
+					Stakeholder: Fi Moreton<br>
+					Expected meeting outcome: Information gathered<br>
+					Learning via: Shared knowledge<br>
+					ROI if outcomes achieved: <b>+$340</b><br>
+					<p>Expected participant outcomes (7 participants):<br>
+						<ol>
+							<li>Knowledge shared during meeting</li>
+							<li>Stop/Start/Do action(s) differently after meeting</li>
+						</ol>
+					</p>			
+				</div>
+				<div data-role="collapsible" class="small" data-collapsed-icon="calendar" data-expanded-icon="calendar">
+					<h4>Wed 10th Jun, 1:30pm (30min)<br>Redfin catchup (+$1174)</h4>
+					<b>Meeting type: Internal (room/table/coffee shop etc)</b><br>
+					Stakeholder: Owen Muir<br>
+					Expected meeting outcome: Option(s)/Alternative(s) developed<br>
+					Learning via: Knowledge sharing<br>
+					ROI if outcomes achieved: <b>+$1174</b><br>
+					<p>Expected participant outcomes (7 participants):<br>
+					<ol>
+					<li>Investigation of alternative solutions during meeting</li>
+					<li>Collective understanding during meeting</li>
+					<li>Decision(s) made after meeting</li>
+					</ol>
+					</p>						
+				</div>
+			</div>
+			<div id="Completed" class="ui-body">
+				<p><b>Completed meetings - to be rated</b></p>
+				<div data-role="collapsible" class="small" data-collapsed="false" data-collapsed-icon="calendar" data-expanded-icon="calendar">
+					<h4>Tue 9th Feb, 9:30am (30min)<br>My 1-1 with my manager (+$130)</h4>
+					<b>Meeting type: Internal (room/table/coffee shop etc)</b><br>
+					Stakeholder: Fi Moreton<br>
+					Expected meeting outcome: Decision(s) made<br>
+					Learning via: Shared knowledge<br>
+					ROI if outcomes achieved: <b>+$130</b><br>
+					<p>Expected participant outcomes (2 participants):<br>
+						<ol>
+							<li>Knowledge shared during meeting</li>
+							<li>Stop/Start/Do action(s) differently after meeting</li>
+						</ol>
+					</p>
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="small">
+					    <legend class="small"><b>Do you consider the meeting objectives were:</b></legend>
+					    <input type="radio" name="donemeeting-6" id="donemeeting-6a" value="off">
+					    <label for="donemeeting-6a">Not met</label>
+					    <input type="radio" name="donemeeting-6" id="donemeeting-6b" value="off">
+					    <label for="donemeeting-6b">Met</label>
+					</fieldset>				
+				</div>
+			</div>
+			<div id="Rated" class="ui-body">
+				<p><b>Rated ROI of my meetings</b></p>
+				<div data-role="collapsible" class="small" data-collapsed-icon="user" data-expanded-icon="user">
+					<h4>Kerry-Fi 1-1<br>+$130 out of +$130</h4>
+					Held: Tue 2nd Feb, 9:30am (30min)<br>
+					Meeting type: Video conference<br>
+					Stakeholder: Fi Moreton<br>
+					Expected meeting outcome: Decision(s) made<br>
+					Learning via: Shared knowledge<br>
+					Expected ROI: <b>+$130</b><br>
+					Rated ROI: <b>+$130</b><br>
+					<p>Expected participant outcomes (2 participants):<br>
+						<ol>
+							<li>Knowledge shared during meeting</li>
+							<li>Stop/Start/Do action(s) differently after meeting</li>
+						</ol>
+					</p>
+					<fieldset class="ui-grid-a">
+						<div class="ui-block-a"><div class="ui-bar ui-bar-a">Participant %</div></div>
+						<div class="ui-block-b"><div class="ui-bar ui-bar-a">Outcomes</div></div>
+						<div class="ui-block-a"><div class="ui-bar ui-bar-a">100%</div></div>
+						<div class="ui-block-b"><div class="ui-bar ui-bar-a">Met</div></div>
+						<div class="ui-block-a"><div class="ui-bar ui-bar-a">0%</div></div>
+						<div class="ui-block-b"><div class="ui-bar ui-bar-a">Not Met</div></div>
+						<div class="ui-block-a"><div class="ui-bar ui-bar-a">0%</div></div>
+						<div class="ui-block-b"><div class="ui-bar ui-bar-a">Did not respond</div></div>
+					</fieldset>			
+				</div>
+				<div data-role="collapsible" class="small" data-collapsed-icon="user" data-expanded-icon="user">
+					<h4>Product Weekly Team Meeting<br>+$291 out of +$340</h4>
+					Held: Mon 1st Feb, 9:15am (30min)<br>
+					Meeting type: Video conference<br>
+					Stakeholder: Fi Moreton<br>
+					Expected meeting outcome: Information gathered<br>
+					Learning via: Shared knowledge<br>
+					Expected ROI: <b>+$340</b><br>
+					Rated ROI: <b>+$291</b><br>
+					<p>Expected participant outcomes (7 participants):<br>
+						<ol>
+							<li>Knowledge shared during meeting</li>
+							<li>Stop/Start/Do action(s) differently after meeting</li>
+						</ol>
+					</p>			
+					<fieldset class="ui-grid-a">
+						<div class="ui-block-a"><div class="ui-bar ui-bar-a">Participant %</div></div>
+						<div class="ui-block-b"><div class="ui-bar ui-bar-a">Outcomes</div></div>
+						<div class="ui-block-a"><div class="ui-bar ui-bar-a">86%</div></div>
+						<div class="ui-block-b"><div class="ui-bar ui-bar-a">Met</div></div>
+						<div class="ui-block-a"><div class="ui-bar ui-bar-a">0%</div></div>
+						<div class="ui-block-b"><div class="ui-bar ui-bar-a">Not Met</div></div>
+						<div class="ui-block-a"><div class="ui-bar ui-bar-a">14%</div></div>
+						<div class="ui-block-b"><div class="ui-bar ui-bar-a">Did not respond</div></div>
+					</fieldset>			
+				</div>
+			</div>
+		</div>
+		
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+<!-- Start of second page---------------------------------------------- -->
+<div data-role="page" id="About1" data-theme="b">
+
+	<div data-role="header">
+		<h3>MeetROYI</h3>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+		<a href="#Settings" data-icon="gear" data-iconpos="notext">Settings</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+	
+		<div class="ui-bar ui-bar-b">
+			<h3>What is ROYI?</h3>
+		</div>
+		<div class="ui-body ui-body-b">
+			<div class="small">
+				<p>ROYI is the acronym for "Return on your investment". The ROYI of your meeting comes from the value your meeting provides to the meeting stakeholder(s).</p>
+				<p>There are many factors to working out the ROYI of a meeting:</p>
+				<ul>
+					<li>meeting length or duration</li>
+					<li>the expected meeting outcome</li>
+					<li>the method used to teach participants</li>
+					<li>the type of meeting (on site, video etc)</li>
+					<li>the number of participants, and their expected outcomes</li>
+				</ul>
+			</div>
+		</div>
+<p></p>
+		<div class="ui-bar ui-bar-b">
+			<h3>Why would I use ROYI?</h3>
+		</div>
+		<div class="ui-body ui-body-b">
+			<div class="small">
+				<p>ROYI's aim is to guide you to have less meetings that are more productive. To create time and space to enable creativity and innovation. He helps you understand:</p>
+				<ul>
+					<li>the return on your investment</li>
+					<li>how much your cost centre can expect to be paid (or pay out) from holding the meeting</li>
+				</ul>
+				<p>ROYI also gives you nicely formatted calendar event details to help all participants understand:</p>
+				<ul>
+					<li>the expected meeting outcome</li>
+					<li>the expected outcomes (a.k.a potential value) for themselves</li>
+					<li>how to attend the meeting</li>
+				</ul>
+			</div>
+		</div>
+<p></p>
+		<div class="ui-bar ui-bar-b">
+			<h3>Why does ROYI work in dollars?</h3>
+		</div>
+		<div class="ui-body ui-body-b">
+			<div class="small">
+				<p>ROYI works in "funny money" to help you:</p>
+				<ul>
+					<li>see the impact of your meeting</li>
+					<li>think about who you REALLY want to invite, and who will actually benefit or provide value</li>
+				</ul>
+			</div>
+		</div>
+		
+		<a href="#About2" class="ui-btn ui-icon-user ui-btn-icon-left">How does ROYI work?</a>
+	</div><!-- /content -->
+	
+</div><!-- /page -->
+
+<!-- Start of third page----------------------------------------------- -->
+<div data-role="page" id="About2" data-theme="b">
+
+	<div data-role="header">
+		<h3>MeetROYI</h3>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+		<a href="#Settings" data-icon="gear" data-iconpos="notext">Settings</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+	
+		<div class="ui-bar ui-bar-b">
+			<h3>How does ROYI get the meeting cost?</h3>
+		</div>
+		<div class="ui-body ui-body-b">
+			<div class="small">
+				<p>The Cost of your meeting comes from the total number of participants and its duration. A standard $53.00 per person per hour is applied to get the meeting Cost.</p>
+			</div>
+		</div>
+<p></p>
+		<div class="ui-bar ui-bar-b">
+			<h3>How does he work out the meeting value?</h3>
+		</div>
+		<div class="ui-body ui-body-b">
+			<div class="small">
+				<p>ROYI assigns the selected outcome/benefit, method & type of meeting, along with the participant expected outcomes a number based on how much they contribute to a well run meeting (based on EventROI research). ROYI then runs his magic meeting converter to come up with an overall Value in dollars.</p>
+			</div>
+		</div>
+<p></p>
+		<div class="ui-bar ui-bar-b">
+			<h3>So, how is the overall ROYI calculated?</h3>
+		</div>
+		<div class="ui-body ui-body-b">
+			<div class="small">
+				<p>ROYI subtracts the meeting Cost from the meeting Value to help you decide if it's worthwhile proceeding.</p>
+				<p>A <span style="color:yellowgreen"><b>positive ROYI</b></span> is good, it means you are making money.</p>
+				<p>A <span style="color:orangered"><b>negative ROYI</b></span> probably means you should look at other alternatives, maybe an e-mail would work better to share the information? Maybe you don't need as many participants? Or, maybe you can achieve the outcome you are looking for with a shorter meeting?</p>
+			</div>
+		</div>
+<p></p>
+		<div class="ui-bar ui-bar-b">
+			<h3>How does meeting value impact ROYI?</h3>
+		</div>
+		<div class="ui-body ui-body-b">
+			<div class="small">
+				<ul>
+					<li><b>Decision(s) made</b> - The most important reason to meet is to make a decision. Nothing beats the immediacy and interaction of gathering as a group to clarify an objective, flesh out alternatives and evaluate options with balanced listening and advocacy. The more difficult the decision, the greater the importance of a well-run meeting. <i>Recommended meeting length: 25 min</i></li>
+					<li><b>Option(s)/Alternative(s) developed</b> - Making progress in solving a problem or analyzing a situation is the second most valuable reason to meet. A complex project requires systematic thought and a careful assessment of risk and reward. So does making a choice with much at stake. Advancing the thinking on a subject may include identifying root causes, establishing milestones, evaluating options and identifying critical success factors <i>Recommended meeting length: 1.5 hrs</i></li>
+					<li><b>Information gathered</b> - Maximizing the quality of feedback and/or ideas requires face-to-face encounters. The dynamics of group interaction can stimulate thinking or prompt a person to raise a concern that might otherwise go unmentioned. Separating gathering input from decision making also reduces the time people spend trying to influence others and increases the numbers of options for consideration <i>Recommended meeting length: 55 min</i></li>
+					<li><b>Teambuilding</b> - Increasing a team’s capacity may involve skill-building, clarifying roles and responsibilities, improving communications, and more. Capacity-building refers to a dedicated meeting devoted solely to training or productivity improvement. For example, building capacity would include developing employee listening skills or problem-solving abilities</li>
+					<li><b>Knowledge shared</b> - A meeting just to share information is generally a waste of time in today’s interconnected work environment, and it is listed here – in last place – to make that point. Except in fast-paced, dynamic environments, information can usually be delivered before or in place of a meeting</li>
+				</ul>
+			</div>
+		</div>
+<p></p>
+		<div class="ui-bar ui-bar-b">
+			<h3>How does the number of participants impact ROYI?</h3>
+		</div>
+		<div class="ui-body ui-body-b">
+			<div class="small">
+				<p>The number of participants is used to calculate the Cost of the meeting. Ensure that the right people attend by asking:</p>
+				<ul>
+					<li>Can they apply what they learn to the benefit of the stakeholder?</li>
+					<li>Are they learning something new to assist them in their actions?</li>
+					<li>Are they sharing knowledge in the meeting to the benefit of the stakeholder?</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<!-- <a href="#Settings" class="ui-btn ui-icon-gear ui-btn-icon-left">Let me adjust the settings</a> -->
+		<a href="#Measure1" class="ui-btn ui-icon-clock ui-btn-icon-left ui-btn-a">Measure my meeting</a>
+		<a href="#MeetROYI" class="ui-btn ui-icon-home ui-btn-icon-left ui-btn-a">Home</a>
+
+	</div><!-- /content -->
+	
+</div><!-- /page -->
+
+<!-- Start of settings page----------------------------------------------- -->
+<div data-role="page" id="Settings" data-theme="c">
+
+	<div data-role="header">
+		<h3>MeetROYI</h3>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+		<a href="#Settings" data-icon="gear" data-iconpos="notext">Settings</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>ROYI uses these settings to measure the ROYI:</p>
+		
+		<form>
+		
+			<label for="slider-7">Cost ($) per person/hr:<i> The default is $53.00, the average cost per person per hour</i></label>
+	        <input type="range" name="slider-7" id="slider-7" min="0" max="100" value="53">
+			
+			<p><i>The settings below must total 100%</i></p>
+			
+			<label for="MtgOutcome">Meeting outcome %</label>
+			<input type="number" data-clear-btn="true" name="MtgOutcome" pattern="[0-9]*" id="MtgOutcome" value="50">
+			<label for="POutcome">Participant outcomes %</label>
+			<input type="number" data-clear-btn="true" name="POutcome" pattern="[0-9]*" id="POutcome" value="30">
+			<label for="PLearn">Participants learning %</label>
+			<input type="number" data-clear-btn="true" name="PLearn" pattern="[0-9]*" id="PLearn" value="10">
+			<label for="MtgType">Meeting type %</label>
+			<input type="number" data-clear-btn="true" name="MtgType" pattern="[0-9]*" id="MtgType" value="10">
+		
+		</form>
+
+		<a href="#" class="ui-btn ui-icon-forward ui-btn-icon-left">Reset defaults</a>
+		<a href="#Measure1" class="ui-btn ui-icon-clock ui-btn-icon-left">Save and measure my meeting</a>
+		
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+<!-- Start of Measure1 page----------------------------------------------- -->
+<div data-role="page" id="Measure1" data-theme="a">
+
+	<div data-role="header">
+		<h3>MeetROYI</h3>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+		<a href="#Settings" data-icon="gear" data-iconpos="notext">Settings</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		
+		<form>
+		
+			<div class="ui-field-contain">
+				<div data-role="controlgroup" data-mini="true">
+					<legend>Which cost centre is the meeting for?</legend>
+					<input type="radio" name="ratemeeting-1" id="ratemeeting-1a" value="on" checked="checked">
+					<label for="ratemeeting-1a">Client Delivery</label>
+					<input type="radio" name="ratemeeting-1" id="ratemeeting-1b" value="off">
+					<label for="ratemeeting-1b">Client Portfolio Management</label>
+					<input type="radio" name="ratemeeting-1" id="ratemeeting-1c" value="off">
+					<label for="ratemeeting-1c">Product Development</label>
+					<input type="radio" name="ratemeeting-1" id="ratemeeting-1d" value="off">
+					<label for="ratemeeting-1d">Product Strategy</label>
+					<input type="radio" name="ratemeeting-1" id="ratemeeting-1e" value="off">
+					<label for="ratemeeting-1e">Sales & Marketing</label>
+					<input type="radio" name="ratemeeting-1" id="ratemeeting-1f" value="off">
+					<label for="ratemeeting-1f">Shared Services/HR</label>
+				</div>
+			</div>
+			
+			<div class="ui-field-contain">
+				How long does your meeting need to be?
+				<label for="sliderhrs">Hours:</label>
+				<input type="range" name="sliderhrs" id="sliderhrs" min="0" max="8" value="0" data-show-value="true">
+				<label for="slidermin">Minutes:</label>
+				<input type="range" name="slidermin" id="slidermin" min="0" max="55" value="25" data-show-value="true" step="5">
+			</div>
+
+			<div class="ui-field-contain">
+				<label for="sliderparticipants">How many participants in total?</label>
+				<input type="range" name="sliderparticipants" id="sliderparticipants" min="0" max="50" value="2" data-show-value="true">
+			</div>
+
+			<div class="ui-field-contain">
+				<legend>Expected outcomes for participants?</legend>
+				<div data-role="controlgroup" data-mini="true" name="checkbox-duringoutcomes">
+					<legend><b>During</b> the meeting:</legend>
+					<input type="checkbox" name="checkbox-duringoutcomes" id="checkbox-duringoutcomesa" value="on" checked="checked">
+					<label for="checkbox-duringoutcomesa">Decision(s) made</label>
+					<input type="checkbox" name="checkbox-duringoutcomes" id="checkbox-duringoutcomesb" value="off">
+					<label for="checkbox-duringoutcomesb">Investigation of alternative solutions</label>
+					<input type="checkbox" name="checkbox-duringoutcomes" id="checkbox-duringoutcomesc" value="off">
+					<label for="checkbox-duringoutcomesc">Collective understanding</label>
+					<input type="checkbox" name="checkbox-duringoutcomes" id="checkbox-duringoutcomesd" value="off">
+					<label for="checkbox-duringoutcomesd">Learning</label>
+				</div>
+				<div data-role="controlgroup" data-mini="true" name="checkbox-afteroutcomes">
+					<legend><b>After</b> the meeting:</legend>
+					<input type="checkbox" name="checkbox-afteroutcomes" id="checkbox-afteroutcomesa" value="off">
+					<label for="checkbox-afteroutcomesa">Decision(s) made</label>
+					<input type="checkbox" name="checkbox-afteroutcomes" id="checkbox-afteroutcomesb" value="off">
+					<label for="checkbox-afteroutcomesb">Investigation of alternative solutions</label>
+					<input type="checkbox" name="checkbox-afteroutcomes" id="checkbox-afteroutcomesc" value="off">
+					<label for="checkbox-afteroutcomesc">Stop/start/do action(s) differently</label>
+					<input type="checkbox" name="checkbox-afteroutcomes" id="checkbox-afteroutcomesd"  value="on" checked="checked">
+					<label for="checkbox-afteroutcomesd">Knowledge sharing</label>
+				</div>
+			</div>
+			
+			<div class="ui-field-contain">
+				<div data-role="controlgroup" data-mini="true" name="radio-learning">
+					<legend>How will participants learn?</legend>
+					<input type="radio" name="radio-learning" id="radio-learninga" value="off">
+					<label for="radio-learninga">Pre-reading</label>
+					<input type="radio" name="radio-learning" id="radio-learningb" value="off">
+					<label for="radio-learningb">Demonstration</label>
+					<input type="radio" name="radio-learning" id="radio-learningc" value="on" checked="checked">
+					<label for="radio-learningc">Knowledge sharing</label>
+				</div>
+			</div>
+
+			<div class="ui-field-contain">
+				<div data-role="controlgroup" data-mini="true" name="radio-mode">
+					<legend>And how will you hold the meeting?</legend>
+					<input type="radio" name="radio-mode" id="radio-modea" value="off">
+					<label for="radio-modea">Teleconference</label>
+					<input type="radio" name="radio-mode" id="radio-modeb" value="off">
+					<label for="radio-modeb">Video conference</label>
+					<input type="radio" name="radio-mode" id="radio-modec" value="on" checked="checked">
+					<label for="radio-modec">Internal (room/table/coffee shop etc)</label>
+					<input type="radio" name="radio-mode" id="radio-moded" value="off">
+					<label for="radio-moded">Online chat</label>
+				</div>
+			</div>
+
+			<div data-role="collapsible">
+				<h4>The ROYI of your meeting is...</h4>
+				<div class="center-wrapper" style="background-color:yellowgreen;">
+					<img width="100" height="76" alt="Header"
+						src="themes/images/purplecow1.png" /> 
+					<span class="bigger"><b>+$340</b></span>
+				</div>
+				<p><b>Wow, nice!</b> At the end of your meeting, if your participants agree that the outcomes were achieved, you can add <b>$340</b> to your cost centre meeting box!</p>
+				<button class="ui-btn ui-mini" id="getValue">Show the overall meeting value</button>
+				<div class="small" data-theme="a">
+					<div class="hidden" id="OutcomeDecisionDuring">
+						<h3>Decision made during meeting</h3>
+						<p>The most important reason to meet is to make a decision. Nothing beats the immediacy and interaction of gathering as a group to clarify an objective, flesh out alternatives and evaluate options with balanced listening and advocacy. The more difficult the decision, the greater the importance of a well-run meeting. <i>Recommended meeting length: 25 min</i></p>
+					</div>
+					<div class="hidden" id="OutcomeDecisionAfter">
+						<h3>Decision made after meeting</h3>
+						<p>The most important reason to meet is to make a decision. Nothing beats the immediacy and interaction of gathering as a group to clarify an objective, flesh out alternatives and evaluate options with balanced listening and advocacy. The more difficult the decision, the greater the importance of a well-run meeting. <i>Recommended meeting length: 25 min</i></p>
+					</div>
+					<div class="hidden" id="OutcomeInvestigation">
+						<h3>Option(s)/Alternative(s) developed</h3>
+						<p>Making progress in solving a problem or analyzing a situation is the second most valuable reason to meet. A complex project requires systematic thought and a careful assessment of risk and reward. So does making a choice with much at stake. Advancing the thinking on a subject may include identifying root causes, establishing milestones, evaluating options and identifying critical success factors <i>Recommended meeting length: 1.5 hrs</i></p>
+					</div>
+					<div class="hidden" id="OutcomeInformation">
+						<h3>Information gathered</h3>
+						<p>Maximizing the quality of feedback and/or ideas requires face-to-face encounters. The dynamics of group interaction can stimulate thinking or prompt a person to raise a concern that might otherwise go unmentioned. Separating gathering input from decision making also reduces the time people spend trying to influence others and increases the numbers of options for consideration <i>Recommended meeting length: 55 min</i></p>
+					</div>
+					<div class="hidden" id="OutcomeTeam">
+						<h3>Teambuilding</h3>
+						<p>Increasing a team’s capacity may involve skill-building, clarifying roles and responsibilities, improving communications, and more. Capacity-building refers to a dedicated meeting devoted solely to training or productivity improvement. For example, building capacity would include developing employee listening skills or problem-solving abilities</p>
+					</div>
+					<div class="hidden" id="OutcomeKnowledge">
+						<h3>Knowledge sharing</h3>
+						<p>A meeting just to share information is generally a waste of time in today’s interconnected work environment, and it is listed here – in last place – to make that point. Except in fast-paced, dynamic environments, information can usually be delivered before or in place of a meeting</p>
+					</div>
+				</div>
+			</div>
+		
+<script>
+$("#getValue").click(function() {
+	$( document.getElementById('OutcomeDecisionDuring') ).fadeOut( "slow" );
+	$( document.getElementById('OutcomeDecisionAfter') ).fadeOut( "slow" );
+	$( document.getElementById('OutcomeInvestigation') ).fadeOut( "slow" );
+	$( document.getElementById('OutcomeInformation') ).fadeOut( "slow" );
+	$( document.getElementById('OutcomeTeam') ).fadeOut( "slow" );
+	$( document.getElementById('OutcomeKnowledge') ).fadeOut( "slow" );
+	if (document.getElementById('checkbox-duringoutcomesa').checked) {
+		$( document.getElementById('OutcomeDecisionDuring') ).fadeIn( "slow" );
+	} else if (document.getElementById('checkbox-afteroutcomesa').checked) {
+		$( document.getElementById('OutcomeDecisionAfter') ).fadeIn( "slow" );
+	} else if (document.getElementById('checkbox-duringoutcomesb').checked) {
+		$( document.getElementById('OutcomeInvestigation') ).fadeIn( "slow" );
+	} else if (document.getElementById('checkbox-afteroutcomesb').checked) {
+		$( document.getElementById('OutcomeInvestigation') ).fadeIn( "slow" );
+	} else if (document.getElementById('checkbox-duringoutcomesc').checked) {
+		$( document.getElementById('OutcomeInformation') ).fadeIn( "slow" );
+	} else if (document.getElementById('checkbox-afteroutcomesc').checked) {
+		$( document.getElementById('OutcomeInformation') ).fadeIn( "slow" );
+	} else if (document.getElementById('checkbox-duringoutcomesd').checked) {
+		$( document.getElementById('OutcomeTeam') ).fadeIn( "slow" );
+	} else {
+		$( document.getElementById('OutcomeKnowledge') ).fadeIn( "slow" );
+	}
+});
+</script>
+
+		</form>
+
+		<a href="#Measure2" class="ui-btn ui-icon-carat-r ui-btn-icon-left">Set up calendar event</a>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+<!-- Start of Measure2 page----------------------------------------------- -->
+<div data-role="page" id="Measure2" data-theme="a">
+
+	<div data-role="header">
+		<h3>MeetROYI</h3>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+		<a href="#Settings" data-icon="gear" data-iconpos="notext">Settings</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		
+		<form>
+		
+			<div class="ui-field-contain">
+				<label for="MtgName">What do you want to call your meeting?</label>
+				<input type="text" data-clear-btn="true" name="MtgName" id="MtgName">
+			</div>
+			<div class="ui-field-contain">
+				<label for="MtgReason">Add your agenda/why the meeting is important</label>
+				<textarea name="MtgReason" id="MtgReason" rows="8"></textarea>
+			</div>
+			<div class="ui-field-contain">
+				<label for="MtgStake1">Who will benefit most from this meeting?</label>
+				<input type="text" data-clear-btn="true" name="MtgStake1" id="MtgStake1" value="Add your main stakeholder here">
+			</div>
+			<div class="ui-field-contain">
+				<label for="MtgReason">Any other details the participants need? <i>e.g.: location, video or teleconference details etc</i></label>
+				<textarea name="MtgReason" id="MtgReason"></textarea>
+			</div>
+
+		</form>
+
+		<a href="#ROYIGood" class="ui-btn ui-icon-carat-r ui-btn-icon-left">Get my calendar details</a>
+		<a href="#Measure1" class="ui-btn ui-icon-back ui-btn-icon-left">Previous</a>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+<!-- Start of ROIGood page----------------------------------------------- -->
+<div data-role="page" id="ROYIGood" data-theme="a">
+
+	<div data-role="header">
+		<h3>MeetROYI</h3>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+		<a href="#Settings" data-icon="gear" data-iconpos="notext">Settings</a>
+	</div><!-- /header -->
+	
+	<div role="main" class="ui-content">
+		
+		<form>
+		
+			<div class="center-wrapper">
+				<div class="ui-bar ui-bar-a">
+					<span><b>The ROYI of your meeting is...</b></span>
+				</div>
+				<div class="ui-body ui-body-b" style="background-color:yellowgreen;">
+					<img width="100" height="76" alt="Header"
+						src="themes/images/purplecow1.png" /> 
+					<span class="bigger"><b>+$340</b></span>
+				</div>
+			</div>
+			<p></p>
+			<fieldset data-role="collapsible" data-theme="c" data-content-theme="c">
+	        	<legend>Calendar event detail(s)</legend>
+				<div class="small" id="eventdetails">
+				<b>Product Strategy - Team Meeting</b> <i>(1 hr)</i><br>
+				<b>Meeting type: Video conference</b><br>
+				Stakeholder: Fi Moreton<br>
+				Expected meeting outcome: Information gathered<br>
+				Learning via: Shared knowledge<br>
+				ROI if outcomes achieved: <b>+$340</b><br>
+				<p>Expected participant outcomes (7 participants):<br>
+				<ol>
+				<li>Knowledge shared during meeting</li>
+				<li>Stop/Start/Do action(s) differently after meeting</li>
+				</ol>
+				</p>
+				<p>Please ensure you are on time, as the meeting will begin on time.</p>
+				<p><b>Agenda:</b></p>
+				<p>1.  Stand up - (20 mins - 3 to 4 minutes per person)<br>
+- Key achievement from last week<br>
+- Any roadblocks?<br>
+2.  Goal review (30 mins) <br>
+- Brief update on goal progression - Any red/amber goals needing team assistance?<br>
+3.  Other business (10 mins)<br>
+- Team collaboration (1 item per week)<br>
+- Business updates from Fiona (if any)
+<p><b>Details:</b></p>
+1. Please join my meeting.<br>
+https://global.gotomeeting.com/join/467492973<br>
+2. Use your microphone and speakers (VoIP) - a headset is recommended.  Or, call in using your telephone.<br>
+Australia: +61 2 8355 1031<br>
+New Zealand: +64 9 925 0481<br>
+United Kingdom: +44 (0) 20 3713 5010<br>
+United States: +1 (571) 317-3117<br>
+<br>
+Access Code: 467-492-973<br>
+Audio PIN: Shown after joining the meeting<br>
+<br>
+Meeting ID: 467-492-973</p>
+</div>
+		    </fieldset>	
+			<p></p>
+				
+		</form>
+
+		<a href="https://calendar.google.com/calendar" class="ui-btn ui-icon-calendar ui-btn-icon-left">Create google calendar event</a>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+	<div data-role="panel" data-display="overlay" id="nav-panel" data-theme="a">
+		<ul data-role="listview" data-theme="a" data-divider-theme="a" data-count-theme="a">
+			<li data-icon="delete"><a href="#" data-rel="close" data-theme="c">Close menu</a></li>
+			<li data-icon="home"><a href="#MeetROYI" data-rel="close">Home</a></li>
+			<li data-role="list-divider">Meetings</li>
+			<li data-icon="clock"><a href="#Measure1" data-rel="close">Set up a meeting</a></li>
+			<li data-icon="calendar"><a href="#MeetROYI" data-rel="close">My meetings <span class="ui-li-count">2</span></a></li>
+			<li data-role="list-divider">All about ROYI</li>
+			<li data-icon="user"><a href="#About1" data-rel="close">About ROYI</a></li>
+		</ul>
+	</div><!-- /panel -->
+
+</body>
+
+</html>
+
